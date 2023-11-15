@@ -61,9 +61,9 @@ def download_memory(download_url, file_name, file_time):
     return download(3)
 
 
-def main():
+def main(json):
     # Load data from JSON file
-    with open("jpg.json") as f:
+    with open(json) as f:
         data = json.load(f)
 
     output_dir = "Downloads"
@@ -132,4 +132,4 @@ def get_gps_degrees(decimal_degrees):
     return [(degrees, 1), (minutes, 1), (seconds, 1000)]
 
 if __name__ == '__main__':
-    main()
+    main("memories_history.json")
